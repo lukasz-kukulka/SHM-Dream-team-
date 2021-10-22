@@ -10,10 +10,10 @@ template <> Json JsonConvert::to_json(const std::unique_ptr<Ship> &object) {
   json.putValue("shipType", object->getShipType());
   json.putValue("speed", object->getSpeed().value);
   json.putValue("turning", object->getTurning().value);
-  json.putValue("maxCrew", object->getMaxCrew());
-  json.putValue("capacity", object->getMaxCapacity());
-  json.putValue("maxCannons", object->getMaxCannons());
-  json.putValue("maxHP", object->getMaxHP());
+  json.putValue("maxCrew", object->getCrew().max);
+  json.putValue("capacity", object->getCapacity().max);
+  json.putValue("maxCannons", object->getCannons().max);
+  json.putValue("maxHP", object->getHP().max);
   json.putValue("upkeep", object->getUpkeep().value);
   json.putValue("cost", object->getCost().value);
 
