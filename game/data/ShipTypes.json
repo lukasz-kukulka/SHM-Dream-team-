@@ -1,0 +1,136 @@
+{
+  "ships": [
+    {
+      "capacity": 400,
+      "cost": 200000,
+      "maxCannons": 50,
+      "maxCrew": 350,
+      "maxHP": 340,
+      "shipType": "Liner",
+      "speed": 14,
+      "turning": 70,
+      "upkeep": 320
+    },
+    {
+      "capacity": 400,
+      "cost": 70000,
+      "maxCannons": 26,
+      "maxCrew": 130,
+      "maxHP": 220,
+      "shipType": "Frigate",
+      "speed": 11,
+      "turning": 80,
+      "upkeep": 220
+    },
+    {
+      "capacity": 500,
+      "cost": 160000,
+      "maxCannons": 40,
+      "maxCrew": 200,
+      "maxHP": 300,
+      "shipType": "Caravel",
+      "speed": 11,
+      "turning": 75,
+      "upkeep": 300
+    },
+    {
+      "capacity": 800,
+      "cost": 50000,
+      "maxCannons": 8,
+      "maxCrew": 40,
+      "maxHP": 300,
+      "shipType": "Trade Fluyt",
+      "speed": 10,
+      "turning": 80,
+      "upkeep": 240
+    },
+    {
+      "capacity": 600,
+      "cost": 120000,
+      "maxCannons": 36,
+      "maxCrew": 180,
+      "maxHP": 280,
+      "shipType": "Galleon",
+      "speed": 10,
+      "turning": 75,
+      "upkeep": 280
+    },
+    {
+      "capacity": 550,
+      "cost": 140000,
+      "maxCannons": 40,
+      "maxCrew": 200,
+      "maxHP": 320,
+      "shipType": "Carrack",
+      "speed": 12,
+      "turning": 75,
+      "upkeep": 320
+    },
+    {
+      "capacity": 350,
+      "cost": 60000,
+      "maxCannons": 24,
+      "maxCrew": 120,
+      "maxHP": 200,
+      "shipType": "Corvette",
+      "speed": 12,
+      "turning": 85,
+      "upkeep": 200
+    },
+    {
+      "capacity": 300,
+      "cost": 36000,
+      "maxCannons": 24,
+      "maxCrew": 120,
+      "maxHP": 120,
+      "shipType": "Pirate Barc",
+      "speed": 12,
+      "turning": 90,
+      "upkeep": 180
+    },
+    {
+      "capacity": 250,
+      "cost": 36000,
+      "maxCannons": 16,
+      "maxCrew": 100,
+      "maxHP": 150,
+      "shipType": "Barc",
+      "speed": 12,
+      "turning": 90,
+      "upkeep": 150
+    },
+    {
+      "capacity": 240,
+      "cost": 27000,
+      "maxCannons": 16,
+      "maxCrew": 80,
+      "maxHP": 140,
+      "shipType": "Brig",
+      "speed": 11,
+      "turning": 95,
+      "upkeep": 140
+    },
+    {
+      "capacity": 200,
+      "cost": 19000,
+      "maxCannons": 14,
+      "maxCrew": 70,
+      "maxHP": 110,
+      "shipType": "Sloop",
+      "speed": 11,
+      "turning": 100,
+      "upkeep": 110
+    },
+    {
+      "capacity": 350,
+      "cost": 120000,
+      "maxCannons": 36,
+      "maxCrew": 180,
+      "maxHP": 250,
+      "shipType": "Military Frigate",
+      "speed": 12,
+      "turning": 85,
+      "upkeep": 250
+    }
+  ]
+}
