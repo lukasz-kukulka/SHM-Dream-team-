@@ -36,10 +36,10 @@ public:
 
   void setName( const std::string& name ) override { name_ = name; }
 
-  ShipResponse subtructCrew(Crew crewNum) override;  
-  ShipResponse subtructCapacity(Capacity capacityNum) override; 
-  ShipResponse subtructCannons(Cannons cannonsNum) override; 
-  ShipResponse subtructHP(HP hpNum) override;
+  ShipResponse subtractCrew(Crew crewNum) override;  
+  ShipResponse subtractCapacity(Capacity capacityNum) override; 
+  ShipResponse subtractCannons(Cannons cannonsNum) override; 
+  ShipResponse subtractHP(HP hpNum) override;
 
   ShipResponse addCrew(Crew crewNum) override;  
   ShipResponse addCapacity(Capacity capacityNum) override;  

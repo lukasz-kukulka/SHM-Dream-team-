@@ -30,10 +30,10 @@ public:
 
   virtual void setName(const std::string &name) = 0;
 
-  virtual ShipResponse subtructCrew(Crew crewNum) = 0;  
-  virtual ShipResponse subtructCapacity(Capacity capacityNum) = 0; 
-  virtual ShipResponse subtructCannons(Cannons cannonsNum) = 0; 
-  virtual ShipResponse subtructHP(HP hpNum) = 0;
+  virtual ShipResponse subtractCrew(Crew crewNum) = 0;  
+  virtual ShipResponse subtractCapacity(Capacity capacityNum) = 0; 
+  virtual ShipResponse subtractCannons(Cannons cannonsNum) = 0; 
+  virtual ShipResponse subtractHP(HP hpNum) = 0;
 
   virtual ShipResponse addCrew(Crew crewNum) = 0;  
   virtual ShipResponse addCapacity(Capacity capacityNum) = 0;  

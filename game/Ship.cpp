@@ -21,7 +21,7 @@ Ship::Ship( const std::string& shipType, Speed speed, Turning turning,const Crew
     : Ship( shipType, speed, turning, crew, capacity, cannons, hp, upkeep, cost, "" ) 
     {}
 
-ShipResponse Ship::subtructCrew( Crew crewNum ) {
+ShipResponse Ship::subtractCrew( Crew crewNum ) {
     if ( crew_ < crewNum ) {
         return ShipResponse::warningMoreThanYouCan;
     }
@@ -29,7 +29,7 @@ ShipResponse Ship::subtructCrew( Crew crewNum ) {
     return ShipResponse::done;
 }
 
-ShipResponse Ship::subtructCapacity( Capacity capacityNum ) {
+ShipResponse Ship::subtractCapacity( Capacity capacityNum ) {
     if ( capacity_ < capacityNum ) {
         return ShipResponse::warningMoreThanYouCan;
     }
@@ -37,7 +37,7 @@ ShipResponse Ship::subtructCapacity( Capacity capacityNum ) {
     return ShipResponse::done;
 }
 
-ShipResponse Ship::subtructCannons( Cannons cannonsNum ) {
+ShipResponse Ship::subtractCannons( Cannons cannonsNum ) {
     if ( cannons_ < cannonsNum ) {
         return ShipResponse::warningMoreThanYouCan;
     }
@@ -48,7 +48,7 @@ ShipResponse Ship::subtructCannons( Cannons cannonsNum ) {
 // I assume that ship can take big hit during battle and HP can drop below 0
 // - in our game there should be
 // some mechanism which will be observe current value of HP
-ShipResponse Ship::subtructHP( HP hpNum ) {
+ShipResponse Ship::subtractHP( HP hpNum ) {
     hp_.currentValue -= hpNum.currentValue;
     return ShipResponse::done;
 }
