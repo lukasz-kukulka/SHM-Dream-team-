@@ -18,14 +18,14 @@ public:
   virtual ~ShipInterface() = default; 
   
   virtual const std::string &getShipType() const = 0;
-  virtual Speed getSpeed() const = 0;
-  virtual Turning getTurning() const = 0;
+  virtual const Speed& getSpeed() const = 0;
+  virtual const Turning& getTurning() const = 0;
   virtual const Crew& getCrew() const = 0;
   virtual const Capacity& getCapacity() const = 0;
   virtual const Cannons& getCannons() const = 0;
   virtual const HP& getHP() const = 0;
-  virtual Upkeep getUpkeep() const = 0;
-  virtual Cost getCost() const = 0;
+  virtual const Upkeep& getUpkeep() const = 0;
+  virtual const Cost& getCost() const = 0;
   virtual const std::string &getName() const = 0;
 
   virtual void setName(const std::string &name) = 0;

@@ -13,6 +13,7 @@ struct Turning {
 };
 
 struct Crew {
+  Crew() {}
   Crew(size_t maxCrew) : max(maxCrew) {}
   Crew(size_t crewNumber, size_t maxCrew)
       : currentNumber(crewNumber), max(maxCrew) {}
@@ -26,6 +27,7 @@ struct Crew {
 };
 
 struct Capacity {
+  Capacity() {}
   Capacity(size_t maxCapacity) : max(maxCapacity) {}
   Capacity(size_t usedCapacity, size_t maxCapacity)
       : currentUsed(usedCapacity), max(maxCapacity) {}
@@ -39,6 +41,7 @@ struct Capacity {
 };
 
 struct Cannons {
+    Cannons() {}
   Cannons(size_t maxCannons) : max(maxCannons) {}
   Cannons(size_t currentCannonsNumber, size_t maxCannons)
       : currentNumber(currentCannonsNumber), max(maxCannons) {}
@@ -48,16 +51,17 @@ struct Cannons {
   }
 
   size_t currentNumber{};
-  size_t max;
+  size_t max{};
 };
 
 struct HP {
+    HP() {}
   HP(int maxHP) : max(maxHP) {}
   HP(int currentHPValue, int maxHP)
       : currentValue(currentHPValue), max(maxHP) {}
 
   int currentValue{};
-  int max{};
+  int max{100};
 };
 
 struct Upkeep {

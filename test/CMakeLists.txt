@@ -9,9 +9,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 enable_testing()
-add_executable(Ship ShipTest.cpp ../game/Ship.cpp ../utility/json/Json.cpp ../utility/json/JsonSerializer.cpp)
-target_link_libraries(Ship gtest_main)
-set_target_properties(Ship PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/test")
+add_executable(Coordinates CoordinatesTest.cpp)
+target_link_libraries(Coordinates gtest_main)
+set_target_properties(Coordinates PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/test")
 
 include(GoogleTest)
-gtest_discover_tests(Ship)
+gtest_discover_tests(Coordinates)

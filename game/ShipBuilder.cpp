@@ -38,14 +38,13 @@ ShipBuilder& ShipBuilder::setCost(const Cost& cost) {
         return *this;
 }
 
+
 ShipBuilder& ShipBuilder::addOwnSettings() {
     return *this;
 }
-
 ShipBuilder& ShipBuilder::setName(const std::string& name) {
         ship_.name_ = name;
         return *this;
-
 }
 ShipBuilder& ShipBuilder::setCrew(const Crew& crew) {
         ship_.crew_.currentNumber = crew.currentNumber;

@@ -5,6 +5,8 @@
 #include "ShipInterface.hpp"
 #include "StructsForShip.hpp"
 
+class ShipBuilder;
+
 enum class ShipResponse {
     done,
     lackOfSpace,
@@ -13,28 +15,24 @@ enum class ShipResponse {
 };
 
 class Ship : public ShipInterface {
+    friend ShipBuilder;
 public:
-  Ship( const std::string& shipType, Speed speed, Turning turning,
-        const Crew& crew, const Capacity& capacity, const Cannons& cannons, 
-        const HP& hp, Upkeep upkeep, Cost cost, const std::string& name );
-  Ship( const std::string& shipType, Speed speed, Turning turning,
-        const Crew& crew, const Capacity& capacity, const Cannons& cannons,
-        const HP& hp, Upkeep upkeep, Cost cost );
-
   ~Ship() override = default;
 
-  const std::string& getShipType() const override { return shipType_; }
-  Speed getSpeed() const override { return speed_; }
-  Turning getTurning() const override { return turning_; }
-  const Crew& getCrew() const override { return crew_; }
-  const Capacity& getCapacity() const override { return capacity_; }
-  const Cannons& getCannons() const override { return cannons_; }
-  const HP& getHP() const override { return hp_; }
-  Upkeep getUpkeep() const override { return upkeep_; }
-  Cost getCost() const override { return cost_; }
-  const std::string& getName() const override { return name_; }
+  static ShipBuilder create();
 
-  void setName( const std::string& name ) override { name_ = name; }
+  const std::string& getShipType() const override;
+  const Speed& getSpeed() const override;
+  const Turning& getTurning() const override;
+  const Crew& getCrew() const override;
+  const Capacity& getCapacity() const override;
+  const Cannons& getCannons() const override;
+  const HP& getHP() const override;
+  const Upkeep& getUpkeep() const override;
+  const Cost& getCost() const override;
+  const std::string& getName() const override;
+
+  void setName( const std::string& name ) override;
 
   ShipResponse subtractCrew(Crew crewNum) override;  
   ShipResponse subtractCapacity(Capacity capacityNum) override; 
@@ -47,6 +45,8 @@ public:
   ShipResponse addHP(HP hpNum) override;
 
 private:
+  Ship();
+
   std::string shipType_{};
   Speed speed_{};
   Turning turning_{};

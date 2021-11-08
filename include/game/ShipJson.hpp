@@ -3,6 +3,7 @@
 
 #include "../../utility/json/JsonSerializer.hpp"
 #include "Ship.hpp"
+#include "ShipBuilder.hpp"
 
 template <> Json JsonConvert::to_json(const std::unique_ptr<Ship> &object) {
 
@@ -31,9 +32,6 @@ template <> std::unique_ptr<Ship> JsonConvert::from_json(const Json &json) {
   const auto maxHP = json.getValue<int>("maxHP");
   const auto upkeep = json.getValue<size_t>("upkeep");
   const auto cost = json.getValue<size_t>("cost");
-
-  return std::make_unique<Ship>(shipType, Speed{speed}, Turning{turning},
-                                Crew{maxCrew}, Capacity{capacity},
-                                Cannons{maxCannons}, HP{maxHP}, Upkeep{upkeep},
-                                Cost{cost});
+    auto ship = Ship::create();
+  return std::make_unique<Ship>(ship);
 }
