@@ -1,6 +1,7 @@
 set(SRC_LIST
     main.cpp
     Ship.cpp
+    ShipBuilder.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})

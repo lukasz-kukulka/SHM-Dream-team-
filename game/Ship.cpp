@@ -1,25 +1,27 @@
 #include "../include/game/Ship.hpp"
+#include "../include/game/ShipBuilder.hpp"
 
 #include <algorithm>
-#include <stdexcept>
 
-Ship::Ship( const std::string& shipType, Speed speed, Turning turning,const Crew& crew, const Capacity& capacity,
-            const Cannons& cannons, const HP& hp, Upkeep upkeep, Cost cost, const std::string& name )
-    : shipType_( shipType )
-    , speed_( speed )
-    , turning_( turning )
-    , crew_( crew )
-    , capacity_( capacity )
-    , cannons_( cannons )
-    , hp_( hp )
-    , upkeep_( upkeep )
-    , cost_( cost )
-    , name_( name ) 
-    {}
-Ship::Ship( const std::string& shipType, Speed speed, Turning turning,const Crew& crew, const Capacity& capacity,
-            const Cannons& cannons, const HP& hp, Upkeep upkeep, Cost cost )
-    : Ship( shipType, speed, turning, crew, capacity, cannons, hp, upkeep, cost, "" ) 
-    {}
+Ship::Ship() {}
+
+ShipBuilder Ship::create() {
+    return ShipBuilder{};
+} 
+  
+const std::string& Ship::getShipType() const { return shipType_; }
+const Speed& Ship::getSpeed() const { return speed_; }
+const Turning& Ship::getTurning() const { return turning_; }
+const Crew& Ship::getCrew() const  { return crew_; }
+const Capacity& Ship::getCapacity() const  { return capacity_; }
+const Cannons& Ship::getCannons() const  { return cannons_; }
+const HP& Ship::getHP() const  { return hp_; }
+const Upkeep& Ship::getUpkeep() const  { return upkeep_; }
+const Cost& Ship::getCost() const  { return cost_; }
+const std::string& Ship::getName() const  { return name_; }
+
+void Ship::setName( const std::string& name )  { name_ = name; }
+
 
 ShipResponse Ship::subtractCrew( Crew crewNum ) {
     if ( crew_ < crewNum ) {
